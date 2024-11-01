@@ -1,15 +1,28 @@
-# Requests, JSON, and basic NLP with spaCy
+# Lyrics Sentiment Analysis Project
 
-Complete the tasks in the Python Notebook in this repository.
-To be submitted for credit, all changes must be committed and pushed to this repository (do not create your own repository unless instructed to on the course website).
+## Overview
+This project uses Python to fetch song lyrics from the [lyrics.ovh API](https://lyricsovh.docs.apiary.io/) and perform sentiment analysis using `spaCyTextBlob`. The analysis helps determine the emotional tone of the lyrics based on a polarity score.
 
-## Rubric
+## Features
+- Fetch song lyrics from an online API.
+- Save lyrics data to JSON files.
+- Perform sentiment analysis on the lyrics.
+- Calculate and interpret polarity scores to understand the emotional sentiment of songs.
 
-* (Question 1) Lyrics printed: 1 pt
-* (Question 1) File created and submitted with notebook: 1 pt
-* (Question 2) Correct polarity reported: 1 pt
-* (Question 2) Question answered thoughtfully: 1 pt
-* (Question 3) Function defined as specified: 1 pt
-* (Question 3) Song lyrics retrieved and stored in separate files (0.5 pts/song): 2 pts
-* (Question 4) Polarity scores printed (with appropriate label containing song title, .25 pts/song): 1 pt
-* (Question 4) Questions answered thoughtfully: 2 pts
+## Tools and Libraries
+- **Python**: Core language used.
+- **requests**: To make HTTP requests to the lyrics API.
+- **spaCy**: For natural language processing.
+- **spaCyTextBlob**: For sentiment analysis.
+- **JSON**: To store and read lyrics data.
+
+## How It Works
+1. **Fetching Lyrics**: The project uses the `lyrics.ovh` API to get lyrics for songs and saves them as JSON files.
+2. **Sentiment Analysis**: The lyrics are analyzed using `spaCyTextBlob` to generate a polarity score ranging from -1.0 (negative) to 1.0 (positive).
+
+## Installation and Setup
+1. Clone this repository to your local machine.
+2. Install the required packages:
+   ```bash
+   pip install requests spacy spacytextblob
+   python -m spacy download en_core_web_sm
